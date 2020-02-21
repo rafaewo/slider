@@ -3,4 +3,11 @@
     margin: 0 70px;
     border: 1px solid orangered;
     text-align: center;
+    transition: 100ms ease-in;
+}
+
+.card:hover {
+    background-color: orangered;
+    color: white;
+    transform: scale(1.2);
 }

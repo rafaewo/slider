@@ -5,10 +5,13 @@ import './Item.scss'
 const Item = ({ professor }) => (
   <SliderContext.Consumer>
     {({ elementRef }) => {
+      const openAvailability = () => {
+        console.log('abrir')
+      }
 
       return (
         <div ref={elementRef}>
-          <div className='card'>
+          <div onClick={openAvailability} className='card'>
             <h1>{professor.dayWeek}</h1>
             <p>{professor.day}</p>
           </div>
