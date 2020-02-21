@@ -1,55 +1,62 @@
 import React, { Component } from 'react';
-import Slider from './components/NetflixSlider'
+import Slider from './components/Slider'
 import './App.scss'
 
-const movies = [
+const profList = [
   {
-    id: 1,
-    image: '/images/slide1.jpg',
-    imageBg: '/images/slide1b.webp',
-    title: '1983'
+    id: '1',
+    dayWeek: 'mon',
+    day: '12',
+    availability: ['09:00', '10:30', '11:00', '13:50']
   },
   {
-    id: 2,
-    image: '/images/slide2.jpg',
-    imageBg: '/images/slide2b.webp',
-    title: 'Russian doll'
+    id: '2',
+    dayWeek: 'tue',
+    day: '13',
+    availability: ['09:00', '10:30', '11:00', '13:50']
   },
   {
-    id: 3,
-    image: '/images/slide3.jpg',
-    imageBg: '/images/slide3b.webp',
-    title: 'The rain',
+    id: '3',
+    dayWeek: 'wed',
+    day: '14',
+    availability: ['09:00', '10:30', '11:00', '13:50']
   },
   {
-    id: 4,
-    image: '/images/slide4.jpg',
-    imageBg: '/images/slide4b.webp',
-    title: 'Sex education'
+    id: '4',
+    dayWeek: 'thu',
+    day: '15',
+    availability: ['09:00', '10:30', '11:00', '13:50']
   },
   {
-    id: 5,
-    image: '/images/slide5.jpg',
-    imageBg: '/images/slide5b.webp',
-    title: 'Elite'
+    id: '5',
+    dayWeek: 'fri',
+    day: '16',
+    availability: ['09:00', '10:30', '11:00', '13:50']
   },
   {
-    id: 6,
-    image: '/images/slide6.jpg',
-    imageBg: '/images/slide6b.webp',
-    title: 'Black mirror'
+    id: '6',
+    dayWeek: 'sat',
+    day: '17',
+    availability: ['09:00', '10:30', '11:00', '13:50']
+  },
+  {
+    id: '7',
+    dayWeek: 'sun',
+    day: '18',
+    availability: ['09:00', '10:30', '11:00', '13:50']
   }
-];
+]
 
 class App extends Component {
   render() {
     return (
       <div className="app">
         <Slider>
-          {movies.map(movie => (
-            <Slider.Item movie={movie} key={movie.id}>item1</Slider.Item>
+          {profList.map(professor => (
+            <Slider.Item professor={professor} key={professor.id} />
           ))}
         </Slider>
+        
       </div>
     );
   }
